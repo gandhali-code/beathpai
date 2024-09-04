@@ -1,0 +1,199 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 0 50px;
+  background-color: #f4f4f4; /* Light grey background */
+  box-sizing: border-box; 
+  overflow: hidden; /* Prevent content from causing scroll */
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items:center; /* Aligns the content to the right */
+ 
+}
+.text-content img {
+  width: 120px;
+  height: 120px;
+}
+
+.title-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px; /* Add some space below the image */
+}
+
+
+
+.text-content h1 {
+  font-size: 3.5rem;
+  color: #d32f2f; /* Red */
+  margin-bottom: 20px;
+  font-family: "Arial Black", sans-serif;
+}
+
+.first-letter {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+
+.text-content p {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 40px;
+  align-items:center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.create-schedule-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: #8e1c25; /* Updated color */
+  color: #fff; /* White text for better contrast */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-schedule-btn:hover {
+  background-color: #b71c1c ; /* Slightly darker shade on hover */
+}
+
+.image-content {
+  max-width: 50%; /* Adjust as needed to fit your layout */
+}
+
+.image-content img {
+  width: 100%; /* Make the image fit within its container */
+  height: auto;
+  border-radius: 0; /* Ensures no rounded borders */
+}
+.footer {
+  
+  color: #2d2828; /* White text color */
+  padding: 0px ;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  margin-left:  3px;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  
+}
+
+.footer-right {
+  margin-right: 3%;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+
+
+}
+
+.name {
+ 
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  color: #751b23;
+}
+
+/* For larger screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .home-container {
+    padding: 0 80px; /* Larger padding for very large screens */
+  }
+
+  .text-content {
+    max-width: 800px; /* Wider max-width for larger screens */
+  }
+
+  .text-content img {
+    width: 150px; /* Larger image size */
+    height: 150px;
+  }
+
+  .text-content h1 {
+    font-size: 4rem; /* Larger font size */
+  }
+
+  .text-content p {
+    font-size: 1.2rem; /* Larger font size */
+  }
+
+  .create-schedule-btn {
+    padding: 20px 40px; /* Larger button padding */
+    font-size: 1.2rem; /* Larger font size */
+  }
+}
+
+
+
+/* For mobile phones (max-width: 767px) */
+@media (max-width: 767px) {
+  .home-container {
+    
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-evenly; /* Center items vertically */
+    padding: 0 50px; /* Adjust padding for small screens */
+    height: 700px; /* Allow height to adjust based on content */
+    text-align: center; /* Center-align text */
+  }
+
+  .text-content {
+    max-width: 100%; /* Full width for small screens */
+    margin: 0; /* Remove horizontal margin */
+  }
+
+  .text-content img {
+    margin-top: 10px;
+    width: 100px; /* Smaller image size */
+    height: 100px;
+    margin-bottom: 15px; /* Space below image */
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem; /* Smaller font size */
+    margin-bottom: 10px; /* Space below title */
+  }
+
+  .text-content p {
+    font-size: 1rem; /* Smaller font size */
+    margin-bottom: 20px; /* Space below text */
+  }
+
+  .create-schedule-btn {
+    margin-bottom: 10px;
+    padding: 10px 20px; /* Smaller button padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .image-content  {
+    max-width: 767px;
+
+   
+    justify-content: center;
+
+  }
+
+  .image-content img {
+    width: 200px; /* Smaller image size */
+    height: 200px;
+
+  }
+}

@@ -1,0 +1,106 @@
+.sidebar {
+  width: 250px; /* Set a fixed width for the sidebar */
+  height: 100vh; /* Full viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-right: 2px solid #8e1c25;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* No additional padding */
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure no scrollbar */
+}
+.sidebar-title {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: #8e1c25 solid 1.5px;
+  margin-bottom: 0px;
+  color: #67141b;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Evenly distribute items */
+  height: 100%; /* Utilize full height */
+}
+
+.sidebar-item {
+  display: flex;
+  
+  align-items: center;
+  padding: 5px 10px; /* Padding inside each item */
+  font-size: 14px; /* Adjust font size if necessary */
+  
+  cursor: pointer;
+  color: #4a4a4a;
+  font-weight: bold;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  justify-content: flex-start; /* Align content to the left */
+}
+
+.sidebar-item.active {
+  background-color: #8e1c25;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar-item:hover {
+  background-color: #f4f4f4;
+}
+
+.sidebar-icon {
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+
+/* larger screens */
+@media screen and (min-width: 1900px) and (min-height: 1200px) {
+  .sidebar {
+    width: 300px; /* Increase sidebar width */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  }
+
+  .sidebar-item {
+    padding: 10px 20px; /* Increase padding for each item */
+    font-size: 16px; /* Increase font size */
+  }
+
+  .sidebar-icon {
+    width: 25px; /* Increase icon size */
+    height: 25px; /* Increase icon size */
+    margin-right: 15px; /* Increase space between icon and text */
+  }
+
+  .sidebar-title {
+    font-size: 18px;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: #8e1c25 solid 1.5px;
+    margin: 0;
+    color: #67141b;
+  }
+}
+
+
+/* Media query to hide sidebar on phone screens */
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: none; /* Hide sidebar on small screens */
+  }
+}

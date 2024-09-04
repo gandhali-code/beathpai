@@ -1,0 +1,30 @@
+/* StickyHeader.css */
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 5px 20px; /* Reduced padding to minimize space */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #d32f2f;
+    z-index: 1000;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    margin: 0; /* Remove any margin that might add space */
+  }
+  
+  .umd-logo {
+    width: 65px;
+    margin-right: 15px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+  }
+  

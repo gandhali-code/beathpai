@@ -1,0 +1,270 @@
+.header {
+   /* Adjust as needed */
+  padding: 10px;
+  text-align: center;
+ 
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #575757;
+}
+
+.content {
+  margin-left: 250px; /* Adjust based on sidebar width */
+  padding: 20px;
+  font-weight: lighter;
+
+  width: calc(100% - 250px); /* Full width minus sidebar */
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content horizontally */
+}
+
+.questions-wrapper {
+  font-weight: lighter;
+
+  background-color: #f9f9f9; /* Light grey background */
+  display: flex; /* Ensure it's a flex container */
+  flex-direction: column; /* Column layout for questions */
+  justify-content: center; /* Center align vertically */
+  align-items: center; /* Center align horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Limit the max width of the container */
+  margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+.question-div {
+  margin-bottom: 20px;
+  font-size: 10px ;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  
+  color: rgb(59, 59, 59);
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center; /* Center align text within the question */
+  background-color: #f4f4f4; /* Light background for each question */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for depth */
+  margin: 10px;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Limit width for larger screens */
+}
+
+.question-div p {
+  font-weight: 500; /* Normal weight */
+  margin: 0; /* Optional: remove default margins */
+  text-align: center;
+  color: rgb(59, 59, 59);
+  
+  
+}
+.radio-group {
+  display: flex;
+  justify-content: center; /* Center align radio buttons */
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  font-size: 13px;
+  color: #333;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center the label text vertically */
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px; /* Space for the radio button */
+}
+
+.radio-group input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #d32f2f;
+  border-radius: 50%;
+  margin-right: 5px; /* Adjust spacing between radio and label */
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radio-group input[type="radio"]:checked {
+  background-color: #d32f2f;
+}
+
+.radio-group input[type="radio"]:focus {
+  outline: none;
+}
+
+.radio-group input[type="radio"]::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Centering the white dot */
+  transition: transform 0.2s ease-in-out;
+}
+
+.radio-group input[type="radio"]:checked::after {
+  transform: translate(-50%, -50%) scale(1); /* Align white dot when checked */
+}
+
+/* Other styles ... */
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.previous-button,
+.next-button {
+  background-color: black; /* Red color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.previous-button:hover,
+.next-button:hover {
+  background-color: #751b23; /* Darker red on hover */
+}
+
+.previous-button{
+  margin-right: 8px;
+}
+
+.previous-button:disabled {
+  background-color: #ccc; /* Grey when disabled */
+  cursor: not-allowed;
+}
+.next-button:disabled {
+  background-color: #ccc; /* Grey when disabled */
+  cursor: not-allowed;
+}
+
+
+@media screen and (min-width: 1900px) and (min-height: 1200px) {
+  .header {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .content {
+    margin-left: 300px; /* Increase margin for larger screens */
+    padding: 40px;
+   
+    font-weight: normal;
+    width: calc(100% - 300px); /* Adjust width based on the larger sidebar */
+  }
+
+  .questions-wrapper {
+    padding: 40px;
+    max-width: 1000px;
+  
+  }
+
+  .question-div {
+    font-size: 14px;
+    padding: 30px;
+    margin: 20px;
+    max-width: 800px;
+  }
+
+  .radio-group label {
+    font-size: 16px;
+  }
+
+  .radio-group input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .button-container {
+    margin-top: 40px;
+  }
+
+  .previous-button,
+  .next-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}
+
+/*for phone screens */
+/* for phone screens */
+@media screen and (max-width: 700px) {
+
+  .questions-container {
+    margin: 0 auto; /* Center the container */
+    padding: 10px; /* Add padding for better spacing */
+    width: 100%; /* Make the container full-width */
+    align-items: center;
+   
+    background-color: #ccc; /* Full-screen gray */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    min-height: 103vh; /* Ensure it covers full height of the screen */
+  }
+
+  .content {
+    padding: 0; /* Remove any extra padding */
+    width: 100%; /* Make the content take up the full width */
+    margin: 0; /* Remove any default margin */
+    align-items: center;
+    /* background-color: #ccc; Match container background color */
+  }
+
+  .header h2 {
+    font-size: 18px; /* Reduce header font size */
+    text-align: center; /* Center the header text */
+  }
+
+  .question-div h2 {
+    font-size: 16px; /* Reduce question font size */
+  }
+
+  .radio-group label {
+    font-size: 14px; /* Adjust the font size for radio labels */
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: start;
+    gap: 8px; /* Space between the buttons */
+  }
+
+  .previous-button,
+  .next-button {
+    width: 90%; /* Make the buttons larger for easier tapping */
+    padding: 10px; /* Increase padding for touch targets */
+    font-size: 14px; /* Adjust font size */
+    margin-bottom: 10px;
+  }
+}
+
