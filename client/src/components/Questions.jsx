@@ -28,7 +28,7 @@ function Questions() {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/questions")
+    fetch("https://beathpai-qgce.onrender.com/api/questions")
       .then((res) => res.json())
       .then((data) => setQuestions(data))
       .catch((error) => console.error("Error fetching questions:", error));
