@@ -1,7 +1,7 @@
 import React from 'react';
 //import StickyHeader from './StickyHeader'; // Ensure the path is correct
 import './Home.css';
-import image1 from '/collage.png'; 
+import image1 from '/collage1.png'; 
 import headImage from '/head.png'; // Import the new image
 import {Link} from 'react-router-dom'
 
