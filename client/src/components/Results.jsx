@@ -169,16 +169,25 @@ doc.addImage(imgData, 'PNG', imgX, imgY, imgWidth, imgHeight);
       
 
       // Add footer text
-      const footerText = "© BEAT-HPAI University of Maryland 2024. All rights reserved";
-      doc.setFontSize(8);
-      doc.setFont('helvetica', 'normal');
-      const pageWidth = doc.internal.pageSize.width;
-      const textWidth = doc.getTextWidth(footerText);
-      doc.text(footerText, 10, pageHeight - 5); // Left aligned
+      // const footerText = "© BEAT-HPAI University of Maryland 2024. All rights reserved";
+      // doc.setFontSize(7);
+      // doc.setFont('helvetica', 'normal');
+      // const pageWidth = doc.internal.pageSize.width;
+      // const textWidth = doc.getTextWidth(footerText);
+      // doc.text(footerText, 10, pageHeight - 5); // Left aligned
+
+      const footerText2 = "BEAT-HPAI was developed by Dr. Mostafa Ghanem in collaboration with graduate student Madhusudan Timilsina, with web support from Gandhali Kokate and inputs from Dr. Nathaniel Tablante. This project was funded by a USDA-NIFA Smith-Lever Special Needs grant, supporting the University of Maryland Poultry Extension Team, which includes Dr. Ghanem, Dr. Tablante, Dr. Jon Moyle, Jenny Rhodes, and Maegan Perdue.";
+      doc.setFontSize(6);
+      
+      doc.setFont('helvetica', 'italic'); // Set font to italic
+      doc.setTextColor(112, 112, 112);
+      const pageWidth = doc.internal.pageSize.width ; // Adjust for margins
+      const splitText = doc.splitTextToSize(footerText2, pageWidth/2); // Split text to fit within the page width
+      doc.text(splitText, 5, pageHeight - 12); // Adjust the Y-position as needed
 
       const logoWidth = 90;  // Adjust logo width
         const logoHeight = 10; // Adjust logo height
-        const logoX = pageWidth - logoWidth - 10; // Positioned on the right
+        const logoX = pageWidth - logoWidth - 8; // Positioned on the right
         const logoY = pageHeight - logoHeight - 5; // Positioned at the bottom
         doc.addImage(logo, 'PNG', logoX, logoY, logoWidth, logoHeight);
     }
