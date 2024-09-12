@@ -51,7 +51,7 @@
     background-color: #b71c1c; /* Darker red on hover */
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
     .about-tool-container {
         max-width: 1500px; /* Increase width for larger screens */
         padding: 20px;
