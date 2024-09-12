@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import logo from '/logos.png'
 import './Results.css';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+
 
 function Results() {
   const location = useLocation();
@@ -42,7 +44,7 @@ function Results() {
     }
   };
 
-  //Generate pdf
+  //Generate pdf----------------------------------------------------------------------
   const generateResults = () => {
     const score = calculateScore();
     const compliance = getComplianceLevel(score);
@@ -168,11 +170,17 @@ doc.addImage(imgData, 'PNG', imgX, imgY, imgWidth, imgHeight);
 
       // Add footer text
       const footerText = "© BEAT-HPAI University of Maryland 2024. All rights reserved";
-      doc.setFontSize(10);
+      doc.setFontSize(8);
       doc.setFont('helvetica', 'normal');
       const pageWidth = doc.internal.pageSize.width;
       const textWidth = doc.getTextWidth(footerText);
-      doc.text(footerText, (pageWidth - textWidth) / 2, pageHeight - 10); // Centered at the bottom
+      doc.text(footerText, 10, pageHeight - 5); // Left aligned
+
+      const logoWidth = 90;  // Adjust logo width
+        const logoHeight = 10; // Adjust logo height
+        const logoX = pageWidth - logoWidth - 10; // Positioned on the right
+        const logoY = pageHeight - logoHeight - 5; // Positioned at the bottom
+        doc.addImage(logo, 'PNG', logoX, logoY, logoWidth, logoHeight);
     }
   });
 
@@ -180,7 +188,7 @@ doc.addImage(imgData, 'PNG', imgX, imgY, imgWidth, imgHeight);
     // Save the PDF
     doc.save("biosecurity_compliance_report.pdf");
   };
-  
+  //----------------------------------------------------------------------------------------------
   
   
   const score = calculateScore();
