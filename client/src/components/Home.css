@@ -27,6 +27,14 @@
   margin-bottom: 5px; /* Add some space below the image */
 }
 
+.text-content h4 {
+  font-size: 0.8rem;
+  font-weight:100 ;
+  color: #0f0f0f; /* Red */
+  margin-top : 0px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 
 
 .text-content h1 {
@@ -38,15 +46,16 @@
 
 .first-letter {
   font-weight: bold;
+  color: #6d161e;
   font-family: Arial, Helvetica, sans-serif;
  
 }
 
 
 .text-content p {
-  font-size: 1.1rem;
-  color: black;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  color : #6d161e;
+  margin-bottom: 20px;
   align-items:center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -94,7 +103,7 @@
 .footer-left {
   margin-left:  3px;
   margin-bottom: 0;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   
 }
 
@@ -105,7 +114,10 @@
 
 
 }
-
+.footer-logo {
+  height: 40px; /* Adjust the height to fit your design */
+  margin-right: 10px; /* Optional: Add some spacing between the image and text */
+}
 .name {
  
   font-size: 0.8rem;
@@ -139,6 +151,31 @@
   .create-schedule-btn {
     padding: 20px 40px; /* Larger button padding */
     font-size: 1.2rem; /* Larger font size */
+  }
+
+  .footer-logo {
+    height: 50px; /* Adjust the height to fit your design */
+    margin-right: 20px; /* Optional: Add some spacing between the image and text */
+  }
+  .footer-left {
+    margin-left:  3px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    
+  }
+  
+  .footer-right {
+    margin-right: 3%;
+    font-size: 1rem;
+    margin-bottom: 0;
+  
+  
+  }
+  .name {
+ 
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: #751b23;
   }
 }
 
@@ -193,7 +230,33 @@
 
   .image-content img {
     width: 200px; /* Smaller image size */
-    height: 200px;
+    height: 150px;
 
+  }
+
+  .footer-logo {
+    height: 20px; /* Adjust the height to fit your design */
+    margin-right: 10px; /* Optional: Add some spacing between the image and text */
+  }
+  .footer-left {
+    margin-left:  3px;
+    margin-bottom: 0;
+    font-size: 0.3rem;
+    
+  }
+  
+  .footer-right {
+    margin-right: 3%;
+    font-size: 0.4rem;
+    margin-bottom: 0;
+  
+  
+  }
+
+  .name {
+ 
+    font-size: 0.4rem;
+    margin-bottom: 0;
+    color: #751b23;
   }
 }
