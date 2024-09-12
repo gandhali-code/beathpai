@@ -22,6 +22,7 @@ function Home() {
                         <span className="first-letter"> A</span>vian 
                         <span className="first-letter"> I</span>nfluenza
                     </p>
+                    <h4>Assess your biosecurity plan and identify areas for improvement on your farm using BEAT-HPAI.</h4>
                     <Link to="/abouttool">
                         <button className="create-schedule-btn">Get Started</button>
                     </Link>
@@ -33,9 +34,10 @@ function Home() {
             {/* Footer */}
             <footer className="footer">
                 <div className="footer-content">
-                    
+                 
                    
                     <p className="footer-left"> © BEAT-HPAI University of Maryland 2024. All rights reserved. </p>
+                    <img src="./logos.png" alt="logos" className="footer-logo" />
                     <p className="footer-right">Developed by 
                     <Link to ="/developer">
                     <span className='name'> Gandhali Kokate</span>
